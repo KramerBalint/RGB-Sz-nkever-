@@ -28,13 +28,13 @@ namespace RGB_Színkeverő
             HEX.Text = $"#{((int)RedSlider.Value):X2}{((int)GreenSlider.Value):X2}{((int)BlueSlider.Value):X2}";
             ColorPreview.Fill = new SolidColorBrush(Color.FromRgb((byte)RedSlider.Value, (byte)GreenSlider.Value, (byte)BlueSlider.Value));
 
-            if ((int)RedSlider.Value > 111 && (int)GreenSlider.Value > 111 && (int)BlueSlider.Value > 111)
+            if ((int)RedSlider.Value + (int)GreenSlider.Value + (int)BlueSlider.Value < 382)
             {
-                PreviewText.Foreground = new SolidColorBrush(Colors.Black);
+                PreviewText.Foreground = new SolidColorBrush(Colors.White);
             }
             else
             {
-                PreviewText.Foreground = new SolidColorBrush(Colors.White);
+                PreviewText.Foreground = new SolidColorBrush(Colors.Black);
             }
 
         }
