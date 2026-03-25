@@ -1,0 +1,53 @@
+﻿<Window x:Class="RGB_Színkeverő.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RGB_Színkeverő"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="500">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" 
+                   Text="RGB Színkeverő" VerticalAlignment="Top" FontSize="22" 
+                   FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,40,0,0" TextWrapping="Wrap" 
+                   Text="Piros" VerticalAlignment="Top" FontSize="16"/>
+        <Slider x:Name="RedSlider" HorizontalAlignment="Left" Margin="15,60,0,0" Width="200" 
+                    Minimum="0" Maximum="255" ValueChanged="Slider_Changed"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" 
+                    Text="Zöld" VerticalAlignment="Top" FontSize="16"/>
+        <Slider x:Name="GreenSlider" HorizontalAlignment="Left" Margin="15,100,0,0" Width="200" 
+                    Minimum="0" Maximum="255" ValueChanged="Slider_Changed"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,120,0,0" TextWrapping="Wrap" 
+                    Text="Kék" VerticalAlignment="Top" FontSize="16"/>
+        <Slider x:Name="BlueSlider" HorizontalAlignment="Left" Margin="15,140,0,0" Width="200" 
+                    Minimum="0" Maximum="255" ValueChanged="Slider_Changed"/>
+
+        <CheckBox x:Name="RedLock" Content="Piros zárás" HorizontalAlignment="Left" 
+                  Margin="10,170,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="GreenLock" Content="Zöld zárás" HorizontalAlignment="Left" 
+                  Margin="90,170,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="BlueLock" Content="Kék zárás" HorizontalAlignment="Left" 
+                  Margin="170,170,0,0" VerticalAlignment="Top"/>
+
+        <Rectangle x:Name="ColorPreview" HorizontalAlignment="Left" Margin="10,200,0,0" 
+                   Stroke="Black" VerticalAlignment="Top" Width="200" Height="100"/>
+        <TextBlock x:Name="PreviewText" Text="Előnézet" HorizontalAlignment="Left" Margin="80,236,0,0" TextWrapping="Wrap" 
+                   VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+
+        <TextBlock x:Name="RGB" HorizontalAlignment="Left" Margin="10,310,0,0" TextWrapping="Wrap" 
+                   Text="RGB:" VerticalAlignment="Top" FontSize="16" TextAlignment="Center"
+                   Width="200"/>
+        <TextBlock x:Name="HEX" HorizontalAlignment="Left" Margin="10,330,0,0" TextWrapping="Wrap" 
+                   Text="HEX:" VerticalAlignment="Top" FontSize="16" TextAlignment="Center"
+                   Width="200"/>
+
+        <Button x:Name="RandomizeButton" Content="Véletelen szín" HorizontalAlignment="Left" 
+                Margin="60,360,0,0" VerticalAlignment="Top" Width="100" Click="RandomizeButton_Click"/>
+        <Button x:Name="DefaultButton" Content="Szín alaphelyzet" HorizontalAlignment="Left" 
+                Margin="60,390,0,0" VerticalAlignment="Top" Width="100" Click="DefaultButton_Click"/>
+        <Button x:Name="ClearCanvasButton" Content="Canvas törlése" HorizontalAlignment="Left" 
+                Margin="60,420,0,0" VerticalAlignment="Top" Width="100" Click="ClearCanvasButton_Click"/>
+
+    </Grid>
+</Window>
